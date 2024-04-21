@@ -43,4 +43,8 @@ and is an optional parameter (with a default of 100).
 
 ## Tokenize and Calculate Alpha Expressions
 
-## 
+## Convert to Qlib format data
+
+## Model training & inference
+
+## Backtest & risk analysis
