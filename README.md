@@ -13,6 +13,8 @@ Qlib is an open-source, AI-oriented quantitative investment platform that aims t
 
 # Architecture
 Here is a high-level overview of AlphaTransformQlib's architecture:
+<img width="902" alt="high-level overview" src="https://github.com/yanzhengkim/AlphaTransformQlib/assets/73112368/a561355d-becd-4a50-abb2-3c2ce17ac66c">
+
 
 # Usage
 ## Config
