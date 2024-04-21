@@ -51,7 +51,7 @@ To test a previously trained model, run:
 ```bash
 python3 exp_tokenizer_calculator.py <alpha_expression> 
 ```
-where `<alpha_expression>` is the mathematical expression of an generated yynergistic formulaic Alpha.
+where `<alpha_expression>` is the mathematical expression of an generated synergistic formulaic Alpha.
 
 An example test command is:
 ```bash
@@ -59,6 +59,18 @@ python3 exp_tokenizer_calculator.py Neutralize(Normalize(Invert(Rank(Divide(TsZs
 ```
 
 ## Convert to Qlib format data
+To test a previously trained model, run:
+```bash
+python scripts/dump_bin.py dump_all <csv_path> <qlib_dir>
+```
+where `<csv_path>` is the mathematical expression of an generated synergistic formulaic Alpha.
+`<qlib_dir>` is the converted qlib format data storage directory.
+
+An example test command is:
+```bash
+python scripts/dump_bin.py dump_all --csv_path ~/dev/stock_price_data_wind --qlib_dir ~/dev/qlib_data/cn_data_wind
+```
+
 
 ## Model training & inference
 
