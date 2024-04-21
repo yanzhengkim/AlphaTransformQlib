@@ -88,3 +88,18 @@ with R.start(experiment_name=EXP_NAME):
 ```
 
 ## Backtest & risk analysis
+To backtest and risk analysis in Qlib on the provided data in the `qlib_dir` directory, run:
+```bash
+# start exp to train model
+# backtest and analysis
+with R.start(experiment_name=EXP_NAME, recorder_id=rid, resume=True):
+    # signal-based analysis 
+    rec = R.get_recorder()
+    sar = SigAnaRecord(rec)
+    sar.generate()
+
+    #  portfolio-based analysis: backtest
+    par = PortAnaRecord(rec, port_analysis_config, "day")
+    par.generate()
+```
+
