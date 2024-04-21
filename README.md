@@ -71,7 +71,20 @@ An example test command is:
 python scripts/dump_bin.py dump_all --csv_path ~/dev/stock_price_data_wind --qlib_dir ~/dev/qlib_data/cn_data_wind
 ```
 
-
 ## Model training & inference
+To train a model in Qlib on the provided data in the `qlib_dir` directory, run:
+```bash
+# start exp to train model
+with R.start(experiment_name=EXP_NAME):
+    model.fit(dataset)
+    R.save_objects(trained_model=model)
+
+    rec = R.get_recorder()
+    rid = rec.id  # save the record id
+
+    # Inference and saving signal
+    sr = SignalRecord(model, dataset, rec)
+    sr.generate()
+```
 
 ## Backtest & risk analysis
