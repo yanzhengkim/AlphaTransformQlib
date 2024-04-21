@@ -41,7 +41,22 @@ where `<checkpoint_path>` is the file path of the saved model checkpoint.
 `<num_distinct_alphas_to_generate>` is the number of distinct alphas (with unique loss values) to generate in the batch, 
 and is an optional parameter (with a default of 100). 
 
+An example test command is:
+```bash
+python3 test_maskable_ppo.py ./checkpoints/new_Sharpe_42_20231105171143/100352_steps.zip
+```
+
 ## Tokenize and Calculate Alpha Expressions
+To test a previously trained model, run:
+```bash
+python3 exp_tokenizer_calculator.py <alpha_expression> 
+```
+where `<alpha_expression>` is the mathematical expression of an generated yynergistic formulaic Alpha.
+
+An example test command is:
+```bash
+python3 exp_tokenizer_calculator.py Neutralize(Normalize(Invert(Rank(Divide(TsZscore(Subtract(TsKurtosis(Divide(Constant(-0.5),TsZscoreRank(Add(Flip($open),Constant(0.5)),3)),5),Constant(-10.0)),252),Constant(-1.0))))))
+```
 
 ## Convert to Qlib format data
 
